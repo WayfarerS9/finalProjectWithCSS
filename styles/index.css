@@ -604,8 +604,8 @@ header .headerWrapper .headerWrapperMenu:hover .headerWrapperMenuItems {
 /* 5 section */
 .activate {
   background-color: transparent;
-  padding-top: 5.8em;
-  padding-bottom: 5.2em;
+  padding-top: 7.8em;
+  padding-bottom: 7.2em;
 }
 @media (min-width: 768px) {
   .activate {

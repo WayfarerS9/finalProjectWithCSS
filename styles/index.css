@@ -605,7 +605,7 @@ header .headerWrapper .headerWrapperMenu:hover .headerWrapperMenuItems {
 .activate {
   background-color: transparent;
   padding-top: 7.8em;
-  padding-bottom: 7.2em;
+  padding-bottom: 8.2em;
 }
 @media (min-width: 768px) {
   .activate {
@@ -836,7 +836,7 @@ footer .footerDeveloper li a:hover {
 }
 @media (min-width: 480px) {
   footer {
-    padding-top: 3em;
-    padding-bottom: 7em;
+    padding-top: 4em;
+    padding-bottom: 8em;
   }
 }

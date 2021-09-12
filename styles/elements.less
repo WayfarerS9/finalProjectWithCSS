@@ -1,0 +1,803 @@
+@import 'mixins.less';
+
+@import 'fonts.less';
+
+@import 'variables.less';
+
+@import 'common_styles.less';
+
+/* header */
+header {
+    .headerMixin;
+}
+
+/* section 1 */
+.start {
+    min-height: 25em;
+    padding: 8em 3em 6em 3em;
+    box-sizing: border-box;
+    @media (min-width: 1440px) {
+        min-height: 28em;
+    }
+    @media (min-width: 1600px) {
+        min-height: 31em;
+    }
+    @media (min-width: 1680px) {
+        min-height: 33em;
+    }
+    @media (min-width: 1920px) {
+        min-height: 37em;
+    }
+    h1 {
+        .h1Mixin;
+        padding-top: 1em;
+        margin-bottom: 0.7em;
+    }
+    p {
+        font-family: @fontRegular;
+        font-size: 1em;
+        letter-spacing: 0.225em;
+        text-transform: uppercase;
+        color: @lightFontColor;
+        text-align: center;
+        line-height: 1.5em;
+        filter: drop-shadow(0px 0px 1px @colorOfTextStroke);
+        @media (max-width: 768px) {
+            font-size: 0.9em;
+        }
+    }
+}
+
+/* wrapper */
+.wrapper {
+    background-color: @lightFontColor;
+    padding: 0 4em 0 4em;
+    @media (max-width: 768px) {
+        padding: 0 2em 0 2em;
+    }
+}
+
+/* section 2 - Text */
+.text {
+    .sectionMixin;
+    h4 {
+        .h4Mixin;
+    }
+
+    p {
+        .pMixin;
+        code {
+            .codeMixin;
+        }
+        a {
+            .aMixin;
+        }
+    }
+
+    hr {
+        .hrMixin;
+    }
+}
+
+/* section 3 - Heading with a subtitle */
+.headerWithSubtitle {
+    .sectionMixin;
+    h4 {
+        .h4Mixin;
+    }
+    .subtitle {
+        .subtitleMixin;
+    }
+    p {
+        .pMixin;
+        margin-bottom: 2em;
+    }
+    h5 {
+        .h5Mixin;
+    }
+    hr {
+        .hrMixin;
+    }
+}
+
+/* section 4 - Headers */
+.headersVariants {
+    .sectionMixin;
+    h2 {
+        .h2Mixin;
+    }
+    h3 {
+        .h3Mixin;
+    }
+    h4 {
+        .h4Mixin;
+    }
+    h5 {
+        .h5Mixin;
+    }
+    h6 {
+        .h6Mixin;
+    }
+    hr {
+        .hrMixin;
+    }
+}
+
+/* section 5 - Formated text */
+.formatedText {
+    .sectionMixin;
+    h5 {
+        .h5Mixin;
+    }
+    blockquote {
+        .blockquoteMixin;
+    }
+}
+
+/* section 6 - Preformated text */
+.preformated {
+    .sectionMixin;
+    h5 {
+        .h5Mixin;
+    }
+    pre {
+        .preformatedStyleMixin;
+    }
+}
+
+/* section 7 - Lists */
+.lists {
+    .sectionMixin;
+    h4 {
+        .h4Mixin;
+    }
+    .listsFlex {
+        display: flex;
+        flex-wrap: wrap;
+        .listsFlex1 {
+            padding-right: 2em;
+            flex-grow: 1;
+            h5 {
+                .h5Mixin;
+            }
+            ul {
+                .listCommonStyleMixin;
+                &:last-of-type {
+                    .listAlternateStyleMixin;
+                }
+            }
+        }
+        .listsFlex2 {
+            padding-right: 2em;
+            flex-grow: 1;
+            h5 {
+                .h5Mixin;
+            }
+            ol {
+                .listCommonStyleMixin;
+            }
+            ul {
+                .listIconsStyleMixin;
+            }
+        }
+    }
+    h5 {
+        .h5Mixin;
+    }
+    .buttonListFlex {
+        display: flex;
+        flex-wrap: wrap;
+        .buttonListFlex1 {
+            @media (min-width: 481px) {
+                width: 50%;
+            }
+            @media (max-width: 480px) {
+                width: 200px;
+            }
+            .actionsCommon {
+                @media (min-width: 769px) {
+                    .rowButtonListMixin;
+                }
+                @media (max-width: 768px) {
+                    display: none;
+                }
+                li {
+                    &:first-of-type {
+                        a {
+                            .mainButtonMixin;
+                            &:hover {
+                                .hoveredMainButtonMixin;
+                            }
+                        }
+                    }
+                    &:last-of-type {
+                        a {
+                            .secondaryButtonMixin;
+                            &:hover {
+                                .hoveredSecondaryButtonMixin;
+                            }
+                        }
+                    }
+                }
+            }
+            .actionsSmall {
+                @media (min-width: 769px) {
+                    .rowButtonListMixin;
+                }
+                @media (max-width: 768px) {
+                    display: none;
+                }
+                li {
+                    &:first-of-type {
+                        a {
+                            .mainButtonSmallMixin;
+                            &:hover {
+                                .hoveredMainButtonMixin;
+                            }
+                        }
+                    }
+                    &:last-of-type {
+                        a {
+                            .secondaryButtonSmallMixin;
+                            &:hover {
+                                .hoveredSecondaryButtonMixin;
+                            }
+                        }
+                    }
+                }
+            }
+            .actionsCommonColumned {
+                .columnButtonListMixin;
+                li {
+                    &:first-of-type {
+                        a {
+                            .mainButtonSmallMixin;
+                            &:hover {
+                                .hoveredMainButtonMixin;
+                            }
+                        }
+                    }
+                    &:last-of-type {
+                        a {
+                            .secondaryButtonSmallMixin;
+                            &:hover {
+                                .hoveredSecondaryButtonMixin;
+                            }
+                        }
+                    }
+                }
+            }
+            .actionsSmallColumned {
+                .columnButtonListMixin;
+                li {
+                    &:first-of-type {
+                        a {
+                            .mainButtonSmallMixin;
+                            &:hover {
+                                .hoveredMainButtonMixin;
+                            }
+                        }
+                    }
+                    &:last-of-type {
+                        a {
+                            .secondaryButtonSmallMixin;
+                            &:hover {
+                                .hoveredSecondaryButtonMixin;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .buttonListFlex2 {
+            flex-grow: 1;
+            @media (min-width: 481px) {
+                width: 50%;
+            }
+            @media (max-width: 480px) {
+                width: 200px;
+            }
+            .actionsCommonFit {
+                .columnButtonListMixin;
+                li {
+                    &:first-of-type {
+                        a {
+                            .mainButtonFitMixin;
+                            &:hover {
+                                .hoveredMainButtonMixin;
+                            }
+                        }
+                    }
+                    &:last-of-type {
+                        a {
+                            .secondaryButtonFitMixin;
+                            &:hover {
+                                .hoveredSecondaryButtonMixin;
+                            }
+                        }
+                    }
+                }
+            }
+            .actionsSmallFit {
+                .columnButtonListMixin;
+                li {
+                    &:first-of-type {
+                        a {
+                            .mainButtonFitMixin;
+                            &:hover {
+                                .hoveredMainButtonMixin;
+                            }
+                        }
+                    }
+                    &:last-of-type {
+                        a {
+                            .secondaryButtonFitMixin;
+                            &:hover {
+                                .hoveredSecondaryButtonMixin;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* section 8 - Tables */
+.tables {
+    .sectionMixin;
+    h4 {
+        .h4Mixin;
+    }
+    h5 {
+        .h5Mixin;
+    }
+    .defaultTable {
+        .defaultTableMixin;
+    }
+    .alternateTable {
+        .alternateTableMixin;
+    }
+}
+
+/* section 9 - Buttons */
+.buttons {
+    .sectionMixin;
+
+    h4 {
+        .h4Mixin;
+    }
+
+    .commonButtons {
+        @media (min-width: 481px) {
+            .rowButtonListMixin;
+        }
+        @media (max-width: 480px) {
+            .columnButtonListMixin;
+        }
+        li {
+            &:first-of-type {
+                a {
+                    .mainButtonMixin;
+                    &:hover {
+                        .hoveredMainButtonMixin;
+                    }
+                }
+            }
+            &:last-of-type {
+                a {
+                    .secondaryButtonMixin;
+                    &:hover {
+                        .hoveredSecondaryButtonMixin;
+                    }
+                }
+            }
+        }
+    }
+    .sizedButtons {
+        @media (min-width: 601px) {
+            display: flex;
+            .rowButtonListMixin;
+        }
+        @media (max-width: 600px) {
+            .columnButtonListMixin;
+        }
+        li {
+            &:nth-child(1) {
+                a {
+                    .largeButtonMixin;
+                    &:hover {
+                        .hoveredSecondaryButtonMixin;
+                    }
+                }
+            }
+            &:nth-child(2) {
+                a {
+                    .secondaryButtonMixin;
+                    &:hover {
+                        .hoveredSecondaryButtonMixin;
+                    }
+                }
+            }
+            &:nth-child(3) {
+                a {
+                    .secondaryButtonSmallMixin;
+                    &:hover {
+                        .hoveredSecondaryButtonMixin;
+                    }
+                }
+            }
+        }
+    }
+    .fitButtons {
+        @media (min-width: 601px) {
+            display: flex;
+            width: 100%;
+            .rowButtonListMixin;
+        }
+
+        @media (max-width: 600px) {
+            .columnButtonListMixin;
+        }
+        li {
+            @media (min-width: 601px) {
+                flex-grow: 1;
+            }
+            display: block;
+            &:nth-child(1) {
+                a {
+                    .secondaryButtonFitMixin;
+                    &:hover {
+                        .hoveredSecondaryButtonMixin;
+                    }
+                }
+            }
+            &:nth-child(2) {
+                a {
+                    .mainButtonFitMixin;
+                    &:hover {
+                        .hoveredMainButtonMixin;
+                    }
+                }
+            }
+            &:nth-child(3) {
+                a {
+                    .secondaryButtonFitMixin;
+                    &:hover {
+                        .hoveredSecondaryButtonMixin;
+                    }
+                }
+            }
+        }
+    }
+    .fitSmallButtons {
+        @media (min-width: 601px) {
+            display: flex;
+            width: 100%;
+            .rowButtonListMixin;
+        }
+
+        @media (max-width: 600px) {
+            .columnButtonListMixin;
+        }
+
+        li {
+            @media (min-width: 601px) {
+                flex-grow: 1;
+            }
+            display: block;
+            &:nth-child(1) {
+                a {
+                    .mainButtonFitMixin;
+                    &:hover {
+                        .hoveredMainButtonMixin;
+                    }
+                }
+            }
+            &:nth-child(2) {
+                a {
+                    .secondaryButtonFitMixin;
+                    &:hover {
+                        .hoveredSecondaryButtonMixin;
+                    }
+                }
+            }
+            &:nth-child(3) {
+                a {
+                    .mainButtonFitMixin;
+                    &:hover {
+                        .hoveredMainButtonMixin;
+                    }
+                }
+            }
+        }
+    }
+    .iconButtons {
+        @media (min-width: 481px) {
+            .rowButtonListMixin;
+        }
+        @media (max-width: 480px) {
+            .columnButtonListMixin;
+        }
+        li {
+            &:first-of-type {
+                a {
+                    .mainButtonMixin;
+                    &:hover {
+                        .hoveredMainButtonMixin;
+                    }
+                }
+            }
+            &:last-of-type {
+                a {
+                    .secondaryButtonMixin;
+                    &:hover {
+                        .hoveredSecondaryButtonMixin;
+                    }
+                }
+            }
+        }
+    }
+    .disabledButtons {
+        @media (min-width: 481px) {
+            .rowButtonListMixin;
+        }
+        @media (max-width: 480px) {
+            .columnButtonListMixin;
+        }
+        li {
+            &:first-of-type {
+                span {
+                    .mainDisabledButtonMixin;
+                }
+            }
+            &:last-of-type {
+                span {
+                    .secondaryDisabledButtonMixin;
+                }
+            }
+        }
+    }
+}
+/* section 10 - form */
+.form {
+    .sectionMixin;
+    h4 {
+        .h4Mixin;
+    }
+    .formFlex {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -1.5em;
+        margin-top: -1.5em;
+        .formFlex1 {
+            @media (min-width: 481px) {
+                .formFlexBlockStyle50Mixin;
+            }
+            @media (max-width: 480px) {
+                .formFlexBlockStyle100Mixin;
+            }
+            input {
+                .inputNameAndEmailMixin;
+            }
+        }
+        .formFlex2 {
+            @media (min-width: 481px) {
+                .formFlexBlockStyle50Mixin;
+            }
+            @media (max-width: 480px) {
+                .formFlexBlockStyle100Mixin;
+            }
+            input {
+                .inputNameAndEmailMixin;
+            }
+        }
+        .formFlex3 {
+            .formFlexBlockStyle100Mixin;
+            select {
+                .inputNameAndEmailMixin;
+            }
+        }
+
+        .formFlex4 {
+            @media (min-width: 481px) {
+                .formFlexBlockStyle33Mixin;
+            }
+            @media (max-width: 480px) {
+                .formFlexBlockStyle100Mixin;
+            }
+            .radioContainerMixin;
+        }
+
+        .formFlex5 {
+            @media (min-width: 481px) {
+                .formFlexBlockStyle50Mixin;
+            }
+            @media (max-width: 480px) {
+                .formFlexBlockStyle100Mixin;
+            }
+            .checkboxContainerMixin;
+        }
+
+        .formFlex6 {
+            .formFlexBlockStyle100Mixin;
+            textarea {
+                .inputTextAreaMixin;
+            }
+        }
+        .formFlex7 {
+            .formFlexBlockStyle100Mixin;
+            ul {
+                @media (min-width: 481px) {
+                    .rowButtonListMixin;
+                }
+                @media (max-width: 480px) {
+                    .columnButtonListMixin;
+                }
+                li:first-of-type {
+                    input {
+                        @media (min-width: 481px) {
+                            .mainButtonMixin;
+                        }
+                        @media (max-width: 480px) {
+                            .mainButtonFitMixin;
+                        }
+                        &:hover {
+                            .hoveredMainButtonMixin;
+                        }
+                    }
+                }
+                li:last-of-type {
+                    input {
+                        @media (min-width: 481px) {
+                            .secondaryButtonMixin;
+                        }
+                        @media (max-width: 480px) {
+                            .secondaryButtonFitMixin;
+                        }
+                        &:hover {
+                            .hoveredSecondaryButtonMixin;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* section 11 - Images */
+.image {
+    .sectionMixin;
+    padding-bottom: 4em;
+    h4 {
+        .h4Mixin;
+    }
+    h5 {
+        .h5Mixin;
+    }
+    .imageGrid {
+        display: grid;
+        grid-template-areas:
+            "mainImg   mainImg   mainImg"
+            "img01     img02     img03"
+            "img04     img05     img06"
+            "img07     img08     img09"
+        ;
+        gap: 0.7em;
+        margin-bottom: 2em;
+        div {
+            border-radius: 3px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .mainImg {
+            grid-area: mainImg;
+            img {
+                max-width: 100%;
+                height: 100%;
+            }
+        }
+        .img01 {
+            width: 100%;
+            grid-area: img01;
+            img {
+                max-width: 100%;
+                height: 100%;
+            }
+        }
+        .img02 {
+            width: 100%;
+            grid-area: img02;
+            img {
+                max-width: 100%;
+                height: 100%;
+            }
+        }
+        .img03 {
+            width: 100%;
+            grid-area: img03;
+            img {
+                max-width: 100%;
+                height: 100%;
+            }
+        }
+        .img04 {
+            width: 100%;
+            grid-area: img04;
+            img {
+                max-width: 100%;
+                height: 100%;
+            }
+        }
+        .img05 {
+            width: 100%;
+            grid-area: img05;
+            img {
+                max-width: 100%;
+                height: 100%;
+            }
+        }
+        .img06 {
+            width: 100%;
+            grid-area: img06;
+            img {
+                max-width: 100%;
+                height: 100%;
+            }
+        }
+        .img07 {
+            width: 100%;
+            grid-area: img07;
+            img {
+                max-width: 100%;
+                height: 100%;
+            }
+        }
+        .img08 {
+            width: 100%;
+            grid-area: img08;
+            img {
+                max-width: 100%;
+                height: 100%;
+            }
+        }
+        .img09 {
+            width: 100%;
+            grid-area: img09;
+            img {
+                max-width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    p {
+        .pMixin;
+        margin-bottom: 2em;
+        .left {
+            float: left;
+            @media (min-width: 481px) {
+                margin: 0.5em 2em 2em 0;
+            }
+            @media (max-width: 480px) {
+                margin: 0.5em 0.8em 1em 0;
+                width: 130px;
+            }
+        }
+        .right {
+            float: right;
+            @media (min-width: 481px) {
+                margin: 0.5em 0 2em 2em;
+            }
+            @media (max-width: 480px) {
+                margin: 0.5em 0em 1em 0.5em;;
+                width: 130px;
+            }
+        }
+    }
+}
+
+/* footer */
+footer {
+    .footerStyleMixin;
+    background-color: rgba(29, 36, 42);
+}

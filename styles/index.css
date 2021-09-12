@@ -836,7 +836,7 @@ footer .footerDeveloper li a:hover {
 }
 @media (min-width: 480px) {
   footer {
-    padding-top: 2em;
-    padding-bottom: 6em;
+    padding-top: 3em;
+    padding-bottom: 7em;
   }
 }
